@@ -7,5 +7,8 @@ target 'whileimhere-ios' do
 
   # Pods for whileimhere-ios
   pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'SDWebImage', '~> 4.0'
+  pod 'Firebase/Core'
 
 end

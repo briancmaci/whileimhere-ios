@@ -12,6 +12,8 @@
 		72C4220B1EB2AAB00073059B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C422091EB2AAB00073059B /* Main.storyboard */; };
 		72C4220D1EB2AAB00073059B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C4220C1EB2AAB00073059B /* Assets.xcassets */; };
 		72C422101EB2AAB00073059B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C4220E1EB2AAB00073059B /* LaunchScreen.storyboard */; };
+		72C422191EB2AE040073059B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72C422171EB2AE040073059B /* GoogleService-Info.plist */; };
+		72C4221A1EB2AE040073059B /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72C422181EB2AE040073059B /* Keys.plist */; };
 		D40ED919936C63A45F4B5A99 /* Pods_whileimhere_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4B3B565DFE0CD03860823B /* Pods_whileimhere_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		72C4220C1EB2AAB00073059B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72C4220F1EB2AAB00073059B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72C422111EB2AAB00073059B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72C422171EB2AE040073059B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		72C422181EB2AE040073059B /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,9 @@
 				72C422091EB2AAB00073059B /* Main.storyboard */,
 				72C4220C1EB2AAB00073059B /* Assets.xcassets */,
 				72C4220E1EB2AAB00073059B /* LaunchScreen.storyboard */,
+				72C422171EB2AE040073059B /* GoogleService-Info.plist */,
 				72C422111EB2AAB00073059B /* Info.plist */,
+				72C422181EB2AE040073059B /* Keys.plist */,
 			);
 			path = "whileimhere-ios";
 			sourceTree = "<group>";
@@ -152,8 +158,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				72C422101EB2AAB00073059B /* LaunchScreen.storyboard in Resources */,
+				72C422191EB2AE040073059B /* GoogleService-Info.plist in Resources */,
 				72C4220D1EB2AAB00073059B /* Assets.xcassets in Resources */,
 				72C4220B1EB2AAB00073059B /* Main.storyboard in Resources */,
+				72C4221A1EB2AE040073059B /* Keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +387,7 @@
 				72C422161EB2AAB10073059B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
