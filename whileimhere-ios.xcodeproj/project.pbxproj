@@ -12,9 +12,13 @@
 		72C4220B1EB2AAB00073059B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C422091EB2AAB00073059B /* Main.storyboard */; };
 		72C4220D1EB2AAB00073059B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C4220C1EB2AAB00073059B /* Assets.xcassets */; };
 		72C422101EB2AAB00073059B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C4220E1EB2AAB00073059B /* LaunchScreen.storyboard */; };
+		D40ED919936C63A45F4B5A99 /* Pods_whileimhere_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4B3B565DFE0CD03860823B /* Pods_whileimhere_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F4B3B565DFE0CD03860823B /* Pods_whileimhere_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whileimhere_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4625E7A0F218276E0AC75B43 /* Pods-whileimhere-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whileimhere-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-whileimhere-ios/Pods-whileimhere-ios.release.xcconfig"; sourceTree = "<group>"; };
+		6955553FA92B9593EA61F8B7 /* Pods-whileimhere-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whileimhere-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whileimhere-ios/Pods-whileimhere-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		72C422021EB2AAB00073059B /* whileimhere-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whileimhere-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C422051EB2AAB00073059B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72C422071EB2AAB00073059B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D40ED919936C63A45F4B5A99 /* Pods_whileimhere_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				72C422041EB2AAB00073059B /* whileimhere-ios */,
 				72C422031EB2AAB00073059B /* Products */,
+				DC3D370C3AC0DDD73717D183 /* Pods */,
+				D84CAB12149BEC428B178159 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "whileimhere-ios";
 			sourceTree = "<group>";
 		};
+		D84CAB12149BEC428B178159 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F4B3B565DFE0CD03860823B /* Pods_whileimhere_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC3D370C3AC0DDD73717D183 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6955553FA92B9593EA61F8B7 /* Pods-whileimhere-ios.debug.xcconfig */,
+				4625E7A0F218276E0AC75B43 /* Pods-whileimhere-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72C422141EB2AAB10073059B /* Build configuration list for PBXNativeTarget "whileimhere-ios" */;
 			buildPhases = (
+				7EA18F650C909F87F0E3E186 /* [CP] Check Pods Manifest.lock */,
 				72C421FE1EB2AAB00073059B /* Sources */,
 				72C421FF1EB2AAB00073059B /* Frameworks */,
 				72C422001EB2AAB00073059B /* Resources */,
+				5A51E239B63A5C4033036030 /* [CP] Embed Pods Frameworks */,
+				2C107CF6C23DBCDE865491A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C107CF6C23DBCDE865491A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-whileimhere-ios/Pods-whileimhere-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A51E239B63A5C4033036030 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-whileimhere-ios/Pods-whileimhere-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EA18F650C909F87F0E3E186 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		72C421FE1EB2AAB00073059B /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		72C422151EB2AAB10073059B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6955553FA92B9593EA61F8B7 /* Pods-whileimhere-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MF94FJYR24;
@@ -272,6 +348,7 @@
 		};
 		72C422161EB2AAB10073059B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4625E7A0F218276E0AC75B43 /* Pods-whileimhere-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MF94FJYR24;
