@@ -15,8 +15,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        FirebaseManager.initFirebase()
+        GoogleMapsManager.initGoogleMaps()
+        
+        initRootViewController()
+        
+        self.window?.makeKeyAndVisible()
         return true
+    }
+    
+    func initRootViewController() {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let landing = LandingViewController(nibName: K.NIBName.VC.Landing, bundle: nil)
+        let nav = UINavigationController(rootViewController: landing)
+        nav.setNavigationBarHidden(true, animated: false)
+        window?.rootViewController = nav
+        
+        print("root vc: \(String(describing: nav.topViewController))")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

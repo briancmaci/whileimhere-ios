@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham-condensed-book-59028c13bb4af.otf">
+            <string>GothamCondensed-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="whileimhere_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmTextField" destination="qXQ-0m-7dy" id="0c7-Qj-bZR"/>
+                <outlet property="emailTextField" destination="Zpd-O5-tlQ" id="z4Q-V5-kIQ"/>
+                <outlet property="passwordTextField" destination="DnP-4x-hGS" id="eer-5v-Dcy"/>
+                <outlet property="signupButton" destination="meG-6G-7WK" id="fhP-NU-Qau"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" clearsOnBeginEditing="YES" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Zpd-O5-tlQ">
+                    <rect key="frame" x="40" y="210" width="295" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Zib-AX-9bj"/>
+                    </constraints>
+                    <color key="textColor" red="0.1007222012" green="0.1089343131" blue="0.11467297379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="GothamCondensed-Book" family="Gotham Condensed" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="DnP-4x-hGS">
+                    <rect key="frame" x="40" y="256" width="295" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Itl-lf-YJc"/>
+                    </constraints>
+                    <color key="textColor" red="0.1007222012" green="0.1089343131" blue="0.11467297379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="GothamCondensed-Book" family="Gotham Condensed" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="qXQ-0m-7dy">
+                    <rect key="frame" x="40" y="302" width="295" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="lP6-fV-2iu"/>
+                    </constraints>
+                    <color key="textColor" red="0.1007222012" green="0.1089343131" blue="0.11467297379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="GothamCondensed-Book" family="Gotham Condensed" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meG-6G-7WK">
+                    <rect key="frame" x="40" y="348" width="80" height="30"/>
+                    <color key="backgroundColor" red="0.91664922240000002" green="0.91662180419999995" blue="0.91663730139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="dme-m5-oJi"/>
+                        <constraint firstAttribute="height" constant="30" id="qkX-R4-cqr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GothamCondensed-Book" family="Gotham Condensed" pointSize="16"/>
+                    <state key="normal" title="Sign Up">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="While I'm Here..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwp-oN-5jc">
+                    <rect key="frame" x="20" y="64" width="335" height="48"/>
+                    <fontDescription key="fontDescription" name="GothamCondensed-Book" family="Gotham Condensed" pointSize="48"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hwp-oN-5jc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="1Yn-Te-bCD"/>
+                <constraint firstItem="qXQ-0m-7dy" firstAttribute="top" secondItem="DnP-4x-hGS" secondAttribute="bottom" constant="16" id="AzE-Fq-vEw"/>
+                <constraint firstItem="DnP-4x-hGS" firstAttribute="top" secondItem="Zpd-O5-tlQ" secondAttribute="bottom" constant="16" id="Jur-DS-1U5"/>
+                <constraint firstItem="meG-6G-7WK" firstAttribute="top" secondItem="qXQ-0m-7dy" secondAttribute="bottom" constant="16" id="OD8-KM-NBa"/>
+                <constraint firstAttribute="trailing" secondItem="qXQ-0m-7dy" secondAttribute="trailing" constant="40" id="P4J-TX-tcQ"/>
+                <constraint firstAttribute="trailing" secondItem="DnP-4x-hGS" secondAttribute="trailing" constant="40" id="STP-xk-9es"/>
+                <constraint firstItem="DnP-4x-hGS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="Wo7-1W-eJY"/>
+                <constraint firstItem="qXQ-0m-7dy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="adH-9j-fd0"/>
+                <constraint firstItem="hwp-oN-5jc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="fuC-Yz-rVP"/>
+                <constraint firstItem="Zpd-O5-tlQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="mCg-j5-MXv"/>
+                <constraint firstAttribute="trailing" secondItem="Zpd-O5-tlQ" secondAttribute="trailing" constant="40" id="mkd-4g-o4J"/>
+                <constraint firstItem="Zpd-O5-tlQ" firstAttribute="top" secondItem="hwp-oN-5jc" secondAttribute="bottom" constant="98" id="orV-eK-IZi"/>
+                <constraint firstAttribute="trailing" secondItem="hwp-oN-5jc" secondAttribute="trailing" constant="20" id="qPV-UE-ZFL"/>
+                <constraint firstItem="meG-6G-7WK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="uqz-AA-wEd"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
