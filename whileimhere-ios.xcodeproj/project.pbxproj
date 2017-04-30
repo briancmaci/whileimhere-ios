@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72741E3A1EB59EE3004D3DDC /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72741E381EB59EE3004D3DDC /* RemindersViewController.swift */; };
+		72741E3B1EB59EE3004D3DDC /* RemindersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72741E391EB59EE3004D3DDC /* RemindersViewController.xib */; };
 		72C422061EB2AAB00073059B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C422051EB2AAB00073059B /* AppDelegate.swift */; };
 		72C4220D1EB2AAB00073059B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C4220C1EB2AAB00073059B /* Assets.xcassets */; };
 		72C422101EB2AAB00073059B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C4220E1EB2AAB00073059B /* LaunchScreen.storyboard */; };
@@ -30,6 +32,8 @@
 		3F4B3B565DFE0CD03860823B /* Pods_whileimhere_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whileimhere_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4625E7A0F218276E0AC75B43 /* Pods-whileimhere-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whileimhere-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-whileimhere-ios/Pods-whileimhere-ios.release.xcconfig"; sourceTree = "<group>"; };
 		6955553FA92B9593EA61F8B7 /* Pods-whileimhere-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whileimhere-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whileimhere-ios/Pods-whileimhere-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		72741E381EB59EE3004D3DDC /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemindersViewController.swift; path = viewcontrollers/RemindersViewController.swift; sourceTree = "<group>"; };
+		72741E391EB59EE3004D3DDC /* RemindersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RemindersViewController.xib; path = viewcontrollers/RemindersViewController.xib; sourceTree = "<group>"; };
 		72C422021EB2AAB00073059B /* whileimhere-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whileimhere-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C422051EB2AAB00073059B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72C4220C1EB2AAB00073059B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				72C4222D1EB2C2360073059B /* _base */,
 				72C4222E1EB2C2590073059B /* LandingViewController.swift */,
 				72C4222F1EB2C2590073059B /* LandingViewController.xib */,
+				72741E381EB59EE3004D3DDC /* RemindersViewController.swift */,
+				72741E391EB59EE3004D3DDC /* RemindersViewController.xib */,
 				72C422351EB2CD940073059B /* SignUpViewController.swift */,
 				72C422361EB2CD940073059B /* SignUpViewController.xib */,
 			);
@@ -252,6 +258,7 @@
 				72C422341EB2C3F80073059B /* gotham-condensed-book-59028c13bb4af.otf in Resources */,
 				72C422381EB2CD940073059B /* SignUpViewController.xib in Resources */,
 				72C422101EB2AAB00073059B /* LaunchScreen.storyboard in Resources */,
+				72741E3B1EB59EE3004D3DDC /* RemindersViewController.xib in Resources */,
 				72C422191EB2AE040073059B /* GoogleService-Info.plist in Resources */,
 				72C4220D1EB2AAB00073059B /* Assets.xcassets in Resources */,
 				72C4221A1EB2AE040073059B /* Keys.plist in Resources */,
@@ -317,6 +324,7 @@
 				72C422261EB2B5E10073059B /* Util.swift in Sources */,
 				72C422301EB2C2590073059B /* LandingViewController.swift in Sources */,
 				72C422231EB2B2FA0073059B /* Config.swift in Sources */,
+				72741E3A1EB59EE3004D3DDC /* RemindersViewController.swift in Sources */,
 				72C422061EB2AAB00073059B /* AppDelegate.swift in Sources */,
 				72C422291EB2B7000073059B /* CurrentUser.swift in Sources */,
 				72C422371EB2CD940073059B /* SignUpViewController.swift in Sources */,

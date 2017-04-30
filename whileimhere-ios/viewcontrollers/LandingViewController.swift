@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LandingViewController: WIHViewController {
 
@@ -42,12 +43,23 @@ class LandingViewController: WIHViewController {
     
     //CTA
     func tappedLoginButton(sender: UIButton) {
-        print("Login tapped")
+        
+        FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+            
+            self.onboardCurrentUser(user!)
+        })
     }
     
     func tappedSignupButton(sender: UIButton) {
         
         let signup = SignUpViewController(nibName: "SignUpViewController", bundle: nil)
         navigationController?.pushViewController(signup, animated: true)
+    }
+    
+    func onboardCurrentUser(_ user: FIRUser) {
+        
+        CurrentUser.shared.uid = user.uid
+        CurrentUser.shared.email = user.email!
+        
     }
 }
