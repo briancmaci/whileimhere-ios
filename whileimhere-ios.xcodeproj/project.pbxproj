@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		72741E3A1EB59EE3004D3DDC /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72741E381EB59EE3004D3DDC /* RemindersViewController.swift */; };
 		72741E3B1EB59EE3004D3DDC /* RemindersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72741E391EB59EE3004D3DDC /* RemindersViewController.xib */; };
+		72741E401EB63167004D3DDC /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72741E3F1EB63167004D3DDC /* Reminder.swift */; };
+		72741E481EB6351F004D3DDC /* UIControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72741E471EB6351F004D3DDC /* UIControlExtension.swift */; };
 		72C422061EB2AAB00073059B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C422051EB2AAB00073059B /* AppDelegate.swift */; };
 		72C4220D1EB2AAB00073059B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C4220C1EB2AAB00073059B /* Assets.xcassets */; };
 		72C422101EB2AAB00073059B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C4220E1EB2AAB00073059B /* LaunchScreen.storyboard */; };
@@ -34,6 +36,9 @@
 		6955553FA92B9593EA61F8B7 /* Pods-whileimhere-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whileimhere-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whileimhere-ios/Pods-whileimhere-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		72741E381EB59EE3004D3DDC /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemindersViewController.swift; path = viewcontrollers/RemindersViewController.swift; sourceTree = "<group>"; };
 		72741E391EB59EE3004D3DDC /* RemindersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RemindersViewController.xib; path = viewcontrollers/RemindersViewController.xib; sourceTree = "<group>"; };
+		72741E3F1EB63167004D3DDC /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reminder.swift; path = models/Reminder.swift; sourceTree = "<group>"; };
+		72741E421EB632AC004D3DDC /* whileimhere-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "whileimhere-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		72741E471EB6351F004D3DDC /* UIControlExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControlExtension.swift; path = extensions/UIControlExtension.swift; sourceTree = "<group>"; };
 		72C422021EB2AAB00073059B /* whileimhere-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whileimhere-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C422051EB2AAB00073059B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72C4220C1EB2AAB00073059B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +71,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72741E3C1EB63133004D3DDC /* reminders */ = {
+			isa = PBXGroup;
+			children = (
+				72741E381EB59EE3004D3DDC /* RemindersViewController.swift */,
+				72741E391EB59EE3004D3DDC /* RemindersViewController.xib */,
+			);
+			name = reminders;
+			sourceTree = "<group>";
+		};
+		72741E3D1EB63141004D3DDC /* signup */ = {
+			isa = PBXGroup;
+			children = (
+				72C422351EB2CD940073059B /* SignUpViewController.swift */,
+				72C422361EB2CD940073059B /* SignUpViewController.xib */,
+			);
+			name = signup;
+			sourceTree = "<group>";
+		};
+		72741E3E1EB6314A004D3DDC /* landing */ = {
+			isa = PBXGroup;
+			children = (
+				72C4222E1EB2C2590073059B /* LandingViewController.swift */,
+				72C4222F1EB2C2590073059B /* LandingViewController.xib */,
+			);
+			name = landing;
+			sourceTree = "<group>";
+		};
+		72741E461EB63503004D3DDC /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				72741E471EB6351F004D3DDC /* UIControlExtension.swift */,
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
 		72C421F91EB2AAB00073059B = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +130,9 @@
 				72C422051EB2AAB00073059B /* AppDelegate.swift */,
 				72C4220C1EB2AAB00073059B /* Assets.xcassets */,
 				72C4220E1EB2AAB00073059B /* LaunchScreen.storyboard */,
+				72741E421EB632AC004D3DDC /* whileimhere-ios-Bridging-Header.h */,
 				72C422201EB2B2A90073059B /* config */,
+				72741E461EB63503004D3DDC /* extensions */,
 				72C422321EB2C3E60073059B /* fonts */,
 				72C4221B1EB2B1EC0073059B /* managers */,
 				72C422271EB2B6E20073059B /* models */,
@@ -140,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				72C422281EB2B7000073059B /* CurrentUser.swift */,
+				72741E3F1EB63167004D3DDC /* Reminder.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -148,12 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				72C4222D1EB2C2360073059B /* _base */,
-				72C4222E1EB2C2590073059B /* LandingViewController.swift */,
-				72C4222F1EB2C2590073059B /* LandingViewController.xib */,
-				72741E381EB59EE3004D3DDC /* RemindersViewController.swift */,
-				72741E391EB59EE3004D3DDC /* RemindersViewController.xib */,
-				72C422351EB2CD940073059B /* SignUpViewController.swift */,
-				72C422361EB2CD940073059B /* SignUpViewController.xib */,
+				72741E3E1EB6314A004D3DDC /* landing */,
+				72741E3C1EB63133004D3DDC /* reminders */,
+				72741E3D1EB63141004D3DDC /* signup */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -227,6 +267,7 @@
 					72C422011EB2AAB00073059B = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = MF94FJYR24;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -322,9 +363,11 @@
 			files = (
 				72C4221E1EB2B1FE0073059B /* FirebaseManager.swift in Sources */,
 				72C422261EB2B5E10073059B /* Util.swift in Sources */,
+				72741E401EB63167004D3DDC /* Reminder.swift in Sources */,
 				72C422301EB2C2590073059B /* LandingViewController.swift in Sources */,
 				72C422231EB2B2FA0073059B /* Config.swift in Sources */,
 				72741E3A1EB59EE3004D3DDC /* RemindersViewController.swift in Sources */,
+				72741E481EB6351F004D3DDC /* UIControlExtension.swift in Sources */,
 				72C422061EB2AAB00073059B /* AppDelegate.swift in Sources */,
 				72C422291EB2B7000073059B /* CurrentUser.swift in Sources */,
 				72C422371EB2CD940073059B /* SignUpViewController.swift in Sources */,
@@ -445,11 +488,14 @@
 			baseConfigurationReference = 6955553FA92B9593EA61F8B7 /* Pods-whileimhere-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MF94FJYR24;
 				INFOPLIST_FILE = "whileimhere-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.briancmaci.whileimhere-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "whileimhere-ios/whileimhere-ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -459,11 +505,13 @@
 			baseConfigurationReference = 4625E7A0F218276E0AC75B43 /* Pods-whileimhere-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MF94FJYR24;
 				INFOPLIST_FILE = "whileimhere-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.briancmaci.whileimhere-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "whileimhere-ios/whileimhere-ios-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

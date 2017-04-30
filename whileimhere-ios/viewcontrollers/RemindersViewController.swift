@@ -9,6 +9,9 @@
 import UIKit
 
 class RemindersViewController: WIHViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addReminderButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()

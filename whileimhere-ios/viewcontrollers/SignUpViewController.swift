@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
 
 class SignUpViewController: WIHViewController, UITextFieldDelegate {
 
@@ -60,10 +60,10 @@ class SignUpViewController: WIHViewController, UITextFieldDelegate {
             
             if error == nil {
                 print("We have signed up: \(String(describing: user))")
+                
             } else {
                 print("Sign up error: \(error.debugDescription)")
             }
         })
     }
-
 }

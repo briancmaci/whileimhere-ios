@@ -1,12 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham-condensed-book-59028c13bb4af.otf">
+            <string>GothamCondensed-Book</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RemindersViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RemindersViewController" customModule="whileimhere_ios" customModuleProvider="target">
             <connections>
+                <outlet property="addReminderButton" destination="AXa-OF-akg" id="IhU-gn-pCw"/>
+                <outlet property="tableView" destination="eYp-2w-KVQ" id="JWH-Pi-JZg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +25,46 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eYp-2w-KVQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QW9-Tw-t3a">
+                    <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXa-OF-akg">
+                            <rect key="frame" x="127" y="20" width="120" height="40"/>
+                            <color key="backgroundColor" red="1" green="0.1450980392" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="gCc-fv-e16"/>
+                                <constraint firstAttribute="height" constant="40" id="qoy-qj-Jw4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GothamCondensed-Book" family="Gotham Condensed" pointSize="24"/>
+                            <state key="normal" title="Add Reminder">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="2OE-Kj-ufl"/>
+                        <constraint firstItem="AXa-OF-akg" firstAttribute="centerX" secondItem="QW9-Tw-t3a" secondAttribute="centerX" id="fyn-FB-2yj"/>
+                        <constraint firstItem="AXa-OF-akg" firstAttribute="centerY" secondItem="QW9-Tw-t3a" secondAttribute="centerY" id="vlg-1O-uxy"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eYp-2w-KVQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ARx-em-6j7"/>
+                <constraint firstItem="QW9-Tw-t3a" firstAttribute="top" secondItem="eYp-2w-KVQ" secondAttribute="bottom" id="Axl-hL-94q"/>
+                <constraint firstItem="QW9-Tw-t3a" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Joy-Vd-pEG"/>
+                <constraint firstAttribute="trailing" secondItem="eYp-2w-KVQ" secondAttribute="trailing" id="Yr0-UA-x4A"/>
+                <constraint firstItem="eYp-2w-KVQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qFs-Jb-QVA"/>
+                <constraint firstAttribute="bottom" secondItem="QW9-Tw-t3a" secondAttribute="bottom" id="wXC-W0-D4W"/>
+                <constraint firstAttribute="trailing" secondItem="QW9-Tw-t3a" secondAttribute="trailing" id="wv7-cq-f1W"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
 </document>

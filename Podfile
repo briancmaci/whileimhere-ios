@@ -11,8 +11,6 @@ target 'whileimhere-ios' do
   
   pod 'SDWebImage', '~> 4.0'
 
-  pod 'UIView+Shake', '~> 1.3'
-  
   pod 'Firebase'
   pod 'FirebaseAuth'
   pod 'Firebase/Database'

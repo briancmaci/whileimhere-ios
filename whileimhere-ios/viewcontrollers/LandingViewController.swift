@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
 
 class LandingViewController: WIHViewController {
 
@@ -32,7 +32,6 @@ class LandingViewController: WIHViewController {
     
     func initTextFields() {
         
-        
     }
     
     func initButtons() {
@@ -46,7 +45,25 @@ class LandingViewController: WIHViewController {
         
         FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
             
-            self.onboardCurrentUser(user!)
+            if error == nil {
+                self.onboardCurrentUser(user!)
+                self.gotoReminders()
+            } else {
+                print("Error: \(error.debugDescription)")
+                let errorCode = FIRAuthErrorCode(rawValue: (error?._code)!)
+                
+                switch errorCode! {
+                
+                    case .errorCodeWrongPassword:
+                        self.passwordTextField.shake()
+                    
+                    case .errorCodeInvalidEmail:
+                        self.emailTextField.shake()
+                    
+                    default:
+                        print("Other Error? \(error.debugDescription)")
+                }
+            }
         })
     }
     
@@ -60,6 +77,11 @@ class LandingViewController: WIHViewController {
         
         CurrentUser.shared.uid = user.uid
         CurrentUser.shared.email = user.email!
+    }
+    
+    func gotoReminders() {
         
+        let remindersVC = RemindersViewController(nibName: "RemindersViewController", bundle: nil)
+        navigationController?.pushViewController(remindersVC, animated: true)
     }
 }
