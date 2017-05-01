@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham-condensed-book-59028c13bb4af.otf">
+            <string>GothamCondensed-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewReminderViewController" customModule="whileimhere_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JwJ-W1-AxH" customClass="WIHMapView" customModule="whileimhere_ios" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="JwJ-W1-AxH" secondAttribute="height" multiplier="5:4" id="jPw-c5-xG2"/>
+                    </constraints>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HJX-GM-Ujw">
+                    <rect key="frame" x="15" y="315" width="345" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="mwv-Iv-QFY"/>
+                    </constraints>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                </segmentedControl>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I want to remind myself to..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pbB-um-M0r">
+                    <rect key="frame" x="15" y="358" width="345" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="JB0-BM-q6w"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GothamCondensed-Book" family="Gotham Condensed" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="HJX-GM-Ujw" secondAttribute="trailing" constant="15" id="DKF-Ql-1DS"/>
+                <constraint firstItem="pbB-um-M0r" firstAttribute="top" secondItem="HJX-GM-Ujw" secondAttribute="bottom" constant="15" id="EZw-N6-gn8"/>
+                <constraint firstAttribute="trailing" secondItem="pbB-um-M0r" secondAttribute="trailing" constant="15" id="KVg-ok-PUe"/>
+                <constraint firstItem="HJX-GM-Ujw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="LPT-nG-BXl"/>
+                <constraint firstItem="HJX-GM-Ujw" firstAttribute="top" secondItem="JwJ-W1-AxH" secondAttribute="bottom" constant="15" id="Q5g-ZM-OgP"/>
+                <constraint firstItem="JwJ-W1-AxH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SIq-1E-dIM"/>
+                <constraint firstAttribute="trailing" secondItem="JwJ-W1-AxH" secondAttribute="trailing" id="Z8E-dq-mFU"/>
+                <constraint firstItem="JwJ-W1-AxH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Zy6-N9-A0L"/>
+                <constraint firstItem="pbB-um-M0r" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="x6S-HS-sha"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

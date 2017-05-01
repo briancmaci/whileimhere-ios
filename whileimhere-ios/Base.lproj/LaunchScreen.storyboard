@@ -20,12 +20,28 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WIHLogo" translatesAutoresizingMaskIntoConstraints="NO" id="6hP-Dg-8LZ">
+                                <rect key="frame" x="52" y="299" width="272" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="J1u-CU-x7I"/>
+                                    <constraint firstAttribute="width" constant="272" id="aUR-GW-Q0q"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.89803921568627454" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6hP-Dg-8LZ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1oU-M6-73b"/>
+                            <constraint firstItem="6hP-Dg-8LZ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="GOK-4h-bnh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="WIHLogo" width="538" height="138"/>
+    </resources>
 </document>

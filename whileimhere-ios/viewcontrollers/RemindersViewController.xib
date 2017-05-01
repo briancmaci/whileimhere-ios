@@ -16,7 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RemindersViewController" customModule="whileimhere_ios" customModuleProvider="target">
             <connections>
-                <outlet property="addReminderButton" destination="AXa-OF-akg" id="IhU-gn-pCw"/>
+                <outlet property="addReminderButton" destination="AXa-OF-akg" id="Q8x-lv-ceJ"/>
                 <outlet property="tableView" destination="eYp-2w-KVQ" id="JWH-Pi-JZg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,15 +33,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QW9-Tw-t3a">
                     <rect key="frame" x="0.0" y="587" width="375" height="80"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXa-OF-akg">
-                            <rect key="frame" x="127" y="20" width="120" height="40"/>
-                            <color key="backgroundColor" red="1" green="0.1450980392" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXa-OF-akg" customClass="WIHButton" customModule="whileimhere_ios" customModuleProvider="target">
+                            <rect key="frame" x="97" y="20" width="180" height="40"/>
+                            <color key="backgroundColor" red="0.71764705882352942" green="0.0" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="120" id="gCc-fv-e16"/>
+                                <constraint firstAttribute="width" constant="180" id="gCc-fv-e16"/>
                                 <constraint firstAttribute="height" constant="40" id="qoy-qj-Jw4"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="GothamCondensed-Book" family="Gotham Condensed" pointSize="24"/>
-                            <state key="normal" title="Add Reminder">
+                            <fontDescription key="fontDescription" name="GothamCondensed-Book" family="Gotham Condensed" pointSize="20"/>
+                            <state key="normal" title="Oh! That reminds me...">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>

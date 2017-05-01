@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7273E4041EB69225001DC984 /* WIHNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273E4021EB69225001DC984 /* WIHNavigationController.swift */; };
+		7273E4081EB6BE7F001DC984 /* AddNewReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273E4061EB6BE7F001DC984 /* AddNewReminderViewController.swift */; };
+		7273E4091EB6BE7F001DC984 /* AddNewReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7273E4071EB6BE7F001DC984 /* AddNewReminderViewController.xib */; };
+		7273E40D1EB6C275001DC984 /* ReminderTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273E40C1EB6C275001DC984 /* ReminderTypeManager.swift */; };
+		7273E4111EB6C7DD001DC984 /* WIHMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273E4101EB6C7DD001DC984 /* WIHMapView.swift */; };
+		7273E4131EB6C936001DC984 /* gotham-condensed-light-59066514ea7da.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7273E4121EB6C936001DC984 /* gotham-condensed-light-59066514ea7da.otf */; };
+		7273E4151EB6CADD001DC984 /* WIHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273E4141EB6CADD001DC984 /* WIHButton.swift */; };
+		7273E4181EB6CF9A001DC984 /* ReminderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273E4161EB6CF9A001DC984 /* ReminderCell.swift */; };
+		7273E4191EB6CF9A001DC984 /* ReminderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7273E4171EB6CF9A001DC984 /* ReminderCell.xib */; };
 		72741E3A1EB59EE3004D3DDC /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72741E381EB59EE3004D3DDC /* RemindersViewController.swift */; };
 		72741E3B1EB59EE3004D3DDC /* RemindersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72741E391EB59EE3004D3DDC /* RemindersViewController.xib */; };
 		72741E401EB63167004D3DDC /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72741E3F1EB63167004D3DDC /* Reminder.swift */; };
@@ -34,6 +43,15 @@
 		3F4B3B565DFE0CD03860823B /* Pods_whileimhere_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whileimhere_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4625E7A0F218276E0AC75B43 /* Pods-whileimhere-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whileimhere-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-whileimhere-ios/Pods-whileimhere-ios.release.xcconfig"; sourceTree = "<group>"; };
 		6955553FA92B9593EA61F8B7 /* Pods-whileimhere-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whileimhere-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whileimhere-ios/Pods-whileimhere-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		7273E4021EB69225001DC984 /* WIHNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WIHNavigationController.swift; path = viewcontrollers/WIHNavigationController.swift; sourceTree = "<group>"; };
+		7273E4061EB6BE7F001DC984 /* AddNewReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddNewReminderViewController.swift; path = viewcontrollers/AddNewReminderViewController.swift; sourceTree = "<group>"; };
+		7273E4071EB6BE7F001DC984 /* AddNewReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNewReminderViewController.xib; path = viewcontrollers/AddNewReminderViewController.xib; sourceTree = "<group>"; };
+		7273E40C1EB6C275001DC984 /* ReminderTypeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReminderTypeManager.swift; path = managers/ReminderTypeManager.swift; sourceTree = "<group>"; };
+		7273E4101EB6C7DD001DC984 /* WIHMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WIHMapView.swift; path = custom/WIHMapView.swift; sourceTree = "<group>"; };
+		7273E4121EB6C936001DC984 /* gotham-condensed-light-59066514ea7da.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gotham-condensed-light-59066514ea7da.otf"; path = "fonts/gotham-condensed-light-59066514ea7da.otf"; sourceTree = "<group>"; };
+		7273E4141EB6CADD001DC984 /* WIHButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WIHButton.swift; path = custom/WIHButton.swift; sourceTree = "<group>"; };
+		7273E4161EB6CF9A001DC984 /* ReminderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReminderCell.swift; path = custom/ReminderCell.swift; sourceTree = "<group>"; };
+		7273E4171EB6CF9A001DC984 /* ReminderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReminderCell.xib; path = custom/ReminderCell.xib; sourceTree = "<group>"; };
 		72741E381EB59EE3004D3DDC /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemindersViewController.swift; path = viewcontrollers/RemindersViewController.swift; sourceTree = "<group>"; };
 		72741E391EB59EE3004D3DDC /* RemindersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RemindersViewController.xib; path = viewcontrollers/RemindersViewController.xib; sourceTree = "<group>"; };
 		72741E3F1EB63167004D3DDC /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reminder.swift; path = models/Reminder.swift; sourceTree = "<group>"; };
@@ -71,11 +89,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7273E40F1EB6C7B6001DC984 /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				7273E4101EB6C7DD001DC984 /* WIHMapView.swift */,
+				7273E4141EB6CADD001DC984 /* WIHButton.swift */,
+				7273E4161EB6CF9A001DC984 /* ReminderCell.swift */,
+				7273E4171EB6CF9A001DC984 /* ReminderCell.xib */,
+			);
+			name = custom;
+			sourceTree = "<group>";
+		};
 		72741E3C1EB63133004D3DDC /* reminders */ = {
 			isa = PBXGroup;
 			children = (
 				72741E381EB59EE3004D3DDC /* RemindersViewController.swift */,
 				72741E391EB59EE3004D3DDC /* RemindersViewController.xib */,
+				7273E4061EB6BE7F001DC984 /* AddNewReminderViewController.swift */,
+				7273E4071EB6BE7F001DC984 /* AddNewReminderViewController.xib */,
 			);
 			name = reminders;
 			sourceTree = "<group>";
@@ -132,6 +163,7 @@
 				72C4220E1EB2AAB00073059B /* LaunchScreen.storyboard */,
 				72741E421EB632AC004D3DDC /* whileimhere-ios-Bridging-Header.h */,
 				72C422201EB2B2A90073059B /* config */,
+				7273E40F1EB6C7B6001DC984 /* custom */,
 				72741E461EB63503004D3DDC /* extensions */,
 				72C422321EB2C3E60073059B /* fonts */,
 				72C4221B1EB2B1EC0073059B /* managers */,
@@ -148,6 +180,7 @@
 			children = (
 				72C4221C1EB2B1FE0073059B /* FirebaseManager.swift */,
 				72C4221D1EB2B1FE0073059B /* GoogleMapsManager.swift */,
+				7273E40C1EB6C275001DC984 /* ReminderTypeManager.swift */,
 			);
 			name = managers;
 			sourceTree = "<group>";
@@ -190,6 +223,7 @@
 		72C4222A1EB2C1110073059B /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				7273E4021EB69225001DC984 /* WIHNavigationController.swift */,
 				72C4222D1EB2C2360073059B /* _base */,
 				72741E3E1EB6314A004D3DDC /* landing */,
 				72741E3C1EB63133004D3DDC /* reminders */,
@@ -209,6 +243,7 @@
 		72C422321EB2C3E60073059B /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				7273E4121EB6C936001DC984 /* gotham-condensed-light-59066514ea7da.otf */,
 				72C422331EB2C3F80073059B /* gotham-condensed-book-59028c13bb4af.otf */,
 			);
 			name = fonts;
@@ -297,12 +332,15 @@
 			files = (
 				72C422311EB2C2590073059B /* LandingViewController.xib in Resources */,
 				72C422341EB2C3F80073059B /* gotham-condensed-book-59028c13bb4af.otf in Resources */,
+				7273E4091EB6BE7F001DC984 /* AddNewReminderViewController.xib in Resources */,
+				7273E4191EB6CF9A001DC984 /* ReminderCell.xib in Resources */,
 				72C422381EB2CD940073059B /* SignUpViewController.xib in Resources */,
 				72C422101EB2AAB00073059B /* LaunchScreen.storyboard in Resources */,
 				72741E3B1EB59EE3004D3DDC /* RemindersViewController.xib in Resources */,
 				72C422191EB2AE040073059B /* GoogleService-Info.plist in Resources */,
 				72C4220D1EB2AAB00073059B /* Assets.xcassets in Resources */,
 				72C4221A1EB2AE040073059B /* Keys.plist in Resources */,
+				7273E4131EB6C936001DC984 /* gotham-condensed-light-59066514ea7da.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,14 +400,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				72C4221E1EB2B1FE0073059B /* FirebaseManager.swift in Sources */,
+				7273E4151EB6CADD001DC984 /* WIHButton.swift in Sources */,
 				72C422261EB2B5E10073059B /* Util.swift in Sources */,
 				72741E401EB63167004D3DDC /* Reminder.swift in Sources */,
+				7273E4081EB6BE7F001DC984 /* AddNewReminderViewController.swift in Sources */,
 				72C422301EB2C2590073059B /* LandingViewController.swift in Sources */,
+				7273E40D1EB6C275001DC984 /* ReminderTypeManager.swift in Sources */,
 				72C422231EB2B2FA0073059B /* Config.swift in Sources */,
 				72741E3A1EB59EE3004D3DDC /* RemindersViewController.swift in Sources */,
 				72741E481EB6351F004D3DDC /* UIControlExtension.swift in Sources */,
 				72C422061EB2AAB00073059B /* AppDelegate.swift in Sources */,
+				7273E4041EB69225001DC984 /* WIHNavigationController.swift in Sources */,
 				72C422291EB2B7000073059B /* CurrentUser.swift in Sources */,
+				7273E4181EB6CF9A001DC984 /* ReminderCell.swift in Sources */,
+				7273E4111EB6C7DD001DC984 /* WIHMapView.swift in Sources */,
 				72C422371EB2CD940073059B /* SignUpViewController.swift in Sources */,
 				72C4221F1EB2B1FE0073059B /* GoogleMapsManager.swift in Sources */,
 				72C4222C1EB2C1690073059B /* WIHViewController.swift in Sources */,

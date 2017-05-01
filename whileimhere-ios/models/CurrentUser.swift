@@ -24,7 +24,10 @@ class CurrentUser: NSObject {
 
     var myLastRecordedLocation: CLLocationCoordinate2D! = nil
     
-    var range: CGFloat! 
+    var range: CGFloat!
+    
+    var reminders: [Reminder] = [Reminder(title: "First Reminder", type: .generic),
+                                 Reminder(title: "Second Reminder", type: .specific)]
     
     //update rate
     var updateInterval: TimeInterval = 30
@@ -42,5 +45,6 @@ class CurrentUser: NSObject {
         facebookToken = ""
         notificationToken = ""
         myLastRecordedLocation = nil
+        reminders = []
     }
 }

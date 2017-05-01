@@ -54,7 +54,8 @@ struct K {
     
     //Colors
     struct Color {
-        //static let LandingButtonGray = UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)
+        static let MainBackground = UIColor(red: 232/255, green: 229/255, blue: 223/255, alpha: 1)
+        static let DetailRed = UIColor(red: 183/255, green: 0, blue: 22/255, alpha: 1)
         static let DefaultHex = "CCCCCC"
     }
     
@@ -99,6 +100,11 @@ struct K {
     
     //Strings
     struct String {
+        
+        struct ReminderType {
+            static let Generic = "Generic"
+            static let Specific = "Specific"
+        }
         
     }
     

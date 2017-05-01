@@ -29,8 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let landing = LandingViewController(nibName: K.NIBName.VC.Landing, bundle: nil)
-        let nav = UINavigationController(rootViewController: landing)
-        nav.setNavigationBarHidden(true, animated: false)
+        let nav = WIHNavigationController(rootViewController: landing)
         window?.rootViewController = nav
         
         print("root vc: \(String(describing: nav.topViewController))")

@@ -13,7 +13,7 @@ class LandingViewController: WIHViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginButton: WIHButton!
     @IBOutlet weak var signupButton: UIButton!
     
     override func viewDidLoad() {
@@ -43,6 +43,18 @@ class LandingViewController: WIHViewController {
     //CTA
     func tappedLoginButton(sender: UIButton) {
         
+        if (emailTextField.text?.isEmpty)! {
+            emailTextField.shake()
+            return
+        }
+        
+        if (passwordTextField.text?.isEmpty)! {
+            passwordTextField.shake()
+            return
+        }
+        
+        loginButton.isEnabled = false
+        
         FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
             
             if error == nil {
@@ -64,6 +76,8 @@ class LandingViewController: WIHViewController {
                         print("Other Error? \(error.debugDescription)")
                 }
             }
+            
+            self.loginButton.isEnabled = true
         })
     }
     

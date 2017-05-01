@@ -9,14 +9,17 @@
 import UIKit
 import CoreLocation
 
-enum ReminderType: Int {
-    case generic = 0, specific
-}
-
 class Reminder: NSObject {
     
-    private var title: String!
-    private var locations: [CLLocationCoordinate2D]!
-    private var type: ReminderType!
+    public var title: String!
+    public var locations: [CLLocationCoordinate2D]!
+    public var type: ReminderType!
+    
+    convenience init(title: String, type: ReminderType) {
+        self.init()
+        
+        self.title = title
+        self.type = type
+    }
 
 }
