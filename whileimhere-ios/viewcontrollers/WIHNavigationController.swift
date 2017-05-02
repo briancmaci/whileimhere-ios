@@ -20,6 +20,7 @@ class WIHNavigationController: UINavigationController {
         // Do any additional setup after loading the view.
         setupLogoView()
         setupLogoTitle()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,10 +33,11 @@ class WIHNavigationController: UINavigationController {
         logoView = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: kTitleWidth, height: kTitleHeight)))
         logoView.image = UIImage(named: "WIHLogo")
         logoView.contentMode = .scaleAspectFit
+        logoView.backgroundColor = .black
     }
     func setupLogoTitle() {
         
-        navigationBar.topItem?.titleView = logoView
+        navigationItem.titleView = logoView
     }
     
 

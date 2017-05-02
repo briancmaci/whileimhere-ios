@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		720BADD61EB832760000ECBB /* gotham-condensed-bold-5907face2f419.otf in Resources */ = {isa = PBXBuildFile; fileRef = 720BADD51EB832760000ECBB /* gotham-condensed-bold-5907face2f419.otf */; };
 		7273E4041EB69225001DC984 /* WIHNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273E4021EB69225001DC984 /* WIHNavigationController.swift */; };
 		7273E4081EB6BE7F001DC984 /* AddNewReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273E4061EB6BE7F001DC984 /* AddNewReminderViewController.swift */; };
 		7273E4091EB6BE7F001DC984 /* AddNewReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7273E4071EB6BE7F001DC984 /* AddNewReminderViewController.xib */; };
@@ -43,6 +44,7 @@
 		3F4B3B565DFE0CD03860823B /* Pods_whileimhere_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whileimhere_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4625E7A0F218276E0AC75B43 /* Pods-whileimhere-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whileimhere-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-whileimhere-ios/Pods-whileimhere-ios.release.xcconfig"; sourceTree = "<group>"; };
 		6955553FA92B9593EA61F8B7 /* Pods-whileimhere-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whileimhere-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whileimhere-ios/Pods-whileimhere-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		720BADD51EB832760000ECBB /* gotham-condensed-bold-5907face2f419.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gotham-condensed-bold-5907face2f419.otf"; path = "fonts/gotham-condensed-bold-5907face2f419.otf"; sourceTree = "<group>"; };
 		7273E4021EB69225001DC984 /* WIHNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WIHNavigationController.swift; path = viewcontrollers/WIHNavigationController.swift; sourceTree = "<group>"; };
 		7273E4061EB6BE7F001DC984 /* AddNewReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddNewReminderViewController.swift; path = viewcontrollers/AddNewReminderViewController.swift; sourceTree = "<group>"; };
 		7273E4071EB6BE7F001DC984 /* AddNewReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNewReminderViewController.xib; path = viewcontrollers/AddNewReminderViewController.xib; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 		72C422321EB2C3E60073059B /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				720BADD51EB832760000ECBB /* gotham-condensed-bold-5907face2f419.otf */,
 				7273E4121EB6C936001DC984 /* gotham-condensed-light-59066514ea7da.otf */,
 				72C422331EB2C3F80073059B /* gotham-condensed-book-59028c13bb4af.otf */,
 			);
@@ -333,6 +336,7 @@
 				72C422311EB2C2590073059B /* LandingViewController.xib in Resources */,
 				72C422341EB2C3F80073059B /* gotham-condensed-book-59028c13bb4af.otf in Resources */,
 				7273E4091EB6BE7F001DC984 /* AddNewReminderViewController.xib in Resources */,
+				720BADD61EB832760000ECBB /* gotham-condensed-bold-5907face2f419.otf in Resources */,
 				7273E4191EB6CF9A001DC984 /* ReminderCell.xib in Resources */,
 				72C422381EB2CD940073059B /* SignUpViewController.xib in Resources */,
 				72C422101EB2AAB00073059B /* LaunchScreen.storyboard in Resources */,

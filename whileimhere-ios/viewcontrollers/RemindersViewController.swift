@@ -24,6 +24,7 @@ class RemindersViewController: WIHViewController, UITableViewDelegate, UITableVi
     func initialSetup() {
         
         setupTableView()
+        setupButtons()
     }
     
     func setupTableView() {
@@ -33,6 +34,18 @@ class RemindersViewController: WIHViewController, UITableViewDelegate, UITableVi
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: kCellIdentifier, bundle: nil), forCellReuseIdentifier: kCellIdentifier)
+    }
+    
+    func setupButtons() {
+        
+        addReminderButton.addTarget(self, action: #selector(tappedAddReminderButton), for: .touchUpInside)
+    }
+    
+    func tappedAddReminderButton(sender: UIButton) {
+        
+        let addReminder = AddNewReminderViewController(nibName: "AddNewReminderViewController", bundle: nil)
+        
+        navigationController?.present(UINavigationController(rootViewController: addReminder), animated: true, completion: nil)
     }
     
     //MARK: - UITableView Methods
