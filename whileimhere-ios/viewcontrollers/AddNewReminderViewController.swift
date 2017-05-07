@@ -21,7 +21,6 @@ class AddNewReminderViewController: WIHViewController, UITextViewDelegate {
                                ReminderTypeManager.labelForType(.here),
                                ReminderTypeManager.labelForType(.generic)]
     
-    private var reminderTypeControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,15 +88,17 @@ class AddNewReminderViewController: WIHViewController, UITextViewDelegate {
     func setupReminderType() {
         let reminderFont = UIFont(name: K.FontName.GothamCondensedBook, size: 16)
         
-        reminderTypeControl = UISegmentedControl(items: reminderTypeOptions)
+        let reminderTypeControl = UISegmentedControl(items: reminderTypeOptions)
         
         //FIXME: THIS SUCKS
-        reminderTypeControl.frame = CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width - 30, height: 28))
+        //reminderTypeControl.frame = CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width - 30, height: 28))
         reminderTypeControl.tintColor = K.Color.LogoGray
         reminderTypeControl.setTitleTextAttributes([NSFontAttributeName: reminderFont!], for: .normal)
         reminderTypeControl.selectedSegmentIndex = 0
+        reminderTypeControl.addTarget(self, action: #selector(tappedReminderControl), for: .valueChanged)
         
         reminderTypeContainer.addSubview(reminderTypeControl)
+        reminderTypeControl.frame = CGRect(origin: .zero, size: (reminderTypeControl.superview?.frame.size)!)
     }
     
     func setupButtons() {
@@ -129,6 +130,11 @@ class AddNewReminderViewController: WIHViewController, UITextViewDelegate {
     func tappedSaveButton(_ sender: UIButton) {
         
         print("Save reminder")
+    }
+    
+    func tappedReminderControl(_ sender: UISegmentedControl) {
+        
+        print("Reminder Type: \(reminderTypeOptions[sender.selectedSegmentIndex])")
     }
     
     func keyboardDidShow(_ notif: NSNotification) {
