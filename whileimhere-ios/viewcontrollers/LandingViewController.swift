@@ -43,6 +43,9 @@ class LandingViewController: WIHViewController {
     //CTA
     func tappedLoginButton(sender: UIButton) {
         
+        //FIXME: For now
+        gotoReminders()
+        
         if (emailTextField.text?.isEmpty)! {
             emailTextField.shake()
             return

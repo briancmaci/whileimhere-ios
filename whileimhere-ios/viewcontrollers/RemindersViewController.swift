@@ -45,7 +45,7 @@ class RemindersViewController: WIHViewController, UITableViewDelegate, UITableVi
         
         let addReminder = AddNewReminderViewController(nibName: "AddNewReminderViewController", bundle: nil)
         
-        navigationController?.present(UINavigationController(rootViewController: addReminder), animated: true, completion: nil)
+        navigationController?.present(WIHNavigationController(rootViewController: addReminder), animated: true, completion: nil)
     }
     
     //MARK: - UITableView Methods

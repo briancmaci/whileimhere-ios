@@ -56,17 +56,20 @@ struct K {
     struct Color {
         static let MainBackground = UIColor(red: 232/255, green: 229/255, blue: 223/255, alpha: 1)
         static let DetailRed = UIColor(red: 183/255, green: 0, blue: 22/255, alpha: 1)
+        static let LogoGray = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
         static let DefaultHex = "CCCCCC"
     }
     
     struct FontName {
-        static let InterstateLightCondensed = "Interstate-LightCondensed"
+        static let GothamCondensedBook = "GothamCondensed-Book"
     }
     
     //Icons
     struct Icon {
 
         struct Header {
+            static let Back = "IconBack"
+            static let Close = "IconClose"
         }
         
         struct Reminder {
@@ -101,9 +104,15 @@ struct K {
     //Strings
     struct String {
         
+        static let NoTitle = "NoTitle"
+        
         struct ReminderType {
             static let Generic = "Generic"
             static let Specific = "Specific"
+        }
+        
+        struct AddNewReminder {
+            static let DescriptionDefault = "That reminds me. I need to..."
         }
         
     }
