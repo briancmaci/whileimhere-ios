@@ -107,8 +107,9 @@ struct K {
         static let NoTitle = "NoTitle"
         
         struct ReminderType {
-            static let Generic = "Generic"
-            static let Specific = "Specific"
+            static let Generic = "At a place like..."
+            static let Specific = "At..."
+            static let Here = "Here"
         }
         
         struct AddNewReminder {

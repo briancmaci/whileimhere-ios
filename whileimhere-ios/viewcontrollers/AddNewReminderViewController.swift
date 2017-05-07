@@ -13,9 +13,15 @@ import GooglePlaces
 class AddNewReminderViewController: WIHViewController, UITextViewDelegate {
     
     @IBOutlet weak var mapView: WIHMapView!
-    @IBOutlet weak var reminderType: UISegmentedControl!
+    @IBOutlet weak var reminderTypeContainer: UIView!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
+    
+    let reminderTypeOptions = [ReminderTypeManager.labelForType(.specific),
+                               ReminderTypeManager.labelForType(.here),
+                               ReminderTypeManager.labelForType(.generic)]
+    
+    private var reminderTypeControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,16 +86,23 @@ class AddNewReminderViewController: WIHViewController, UITextViewDelegate {
         descriptionTextView.text = K.String.AddNewReminder.DescriptionDefault
     }
     
-    func setupReminderView() {
-    
-    }
-    
     func setupReminderType() {
-    
+        let reminderFont = UIFont(name: K.FontName.GothamCondensedBook, size: 16)
+        
+        reminderTypeControl = UISegmentedControl(items: reminderTypeOptions)
+        
+        //FIXME: THIS SUCKS
+        reminderTypeControl.frame = CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width - 30, height: 28))
+        reminderTypeControl.tintColor = K.Color.LogoGray
+        reminderTypeControl.setTitleTextAttributes([NSFontAttributeName: reminderFont!], for: .normal)
+        reminderTypeControl.selectedSegmentIndex = 0
+        
+        reminderTypeContainer.addSubview(reminderTypeControl)
     }
     
     func setupButtons() {
-    
+        
+        saveButton.addTarget(self, action: #selector(tappedSaveButton), for: .touchUpInside)
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -111,6 +124,11 @@ class AddNewReminderViewController: WIHViewController, UITextViewDelegate {
         }
         
         return true
+    }
+    
+    func tappedSaveButton(_ sender: UIButton) {
+        
+        print("Save reminder")
     }
     
     func keyboardDidShow(_ notif: NSNotification) {

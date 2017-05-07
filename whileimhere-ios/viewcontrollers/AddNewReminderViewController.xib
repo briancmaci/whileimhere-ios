@@ -19,7 +19,7 @@
             <connections>
                 <outlet property="descriptionTextView" destination="pbB-um-M0r" id="cFe-MO-n1k"/>
                 <outlet property="mapView" destination="JwJ-W1-AxH" id="ofM-31-kna"/>
-                <outlet property="reminderType" destination="ho1-yy-hZr" id="EzP-bG-zAd"/>
+                <outlet property="reminderTypeContainer" destination="RzE-vU-E91" id="6Hi-SQ-Zne"/>
                 <outlet property="saveButton" destination="fh9-af-hh6" id="PGW-7P-l8M"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -36,16 +36,13 @@
                         <constraint firstAttribute="width" secondItem="JwJ-W1-AxH" secondAttribute="height" multiplier="5:4" id="jPw-c5-xG2"/>
                     </constraints>
                 </view>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ho1-yy-hZr">
-                    <rect key="frame" x="15" y="384" width="345" height="29"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RzE-vU-E91">
+                    <rect key="frame" x="15" y="384" width="345" height="28"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="28" id="wQe-pr-9UT"/>
+                        <constraint firstAttribute="height" constant="28" id="JyN-5c-1ZZ"/>
                     </constraints>
-                    <segments>
-                        <segment title="First"/>
-                        <segment title="Second"/>
-                    </segments>
-                </segmentedControl>
+                </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I want to remind myself to..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pbB-um-M0r">
                     <rect key="frame" x="15" y="432" width="345" height="125"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,18 +64,18 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="ho1-yy-hZr" firstAttribute="top" secondItem="JwJ-W1-AxH" secondAttribute="bottom" constant="20" id="3Gl-hM-yB8"/>
                 <constraint firstItem="JwJ-W1-AxH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Biz-Z9-xLX"/>
                 <constraint firstItem="fh9-af-hh6" firstAttribute="top" secondItem="pbB-um-M0r" secondAttribute="bottom" constant="35" id="CpA-XY-GnX"/>
+                <constraint firstItem="RzE-vU-E91" firstAttribute="top" secondItem="JwJ-W1-AxH" secondAttribute="bottom" constant="20" id="IQT-el-ajg"/>
+                <constraint firstAttribute="trailing" secondItem="RzE-vU-E91" secondAttribute="trailing" constant="15" id="TAH-4X-KCi"/>
                 <constraint firstAttribute="trailing" secondItem="pbB-um-M0r" secondAttribute="trailing" constant="15" id="TYf-Ts-9c3"/>
                 <constraint firstItem="pbB-um-M0r" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="aza-0u-owb"/>
                 <constraint firstItem="fh9-af-hh6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cJM-rS-ouw"/>
-                <constraint firstItem="pbB-um-M0r" firstAttribute="top" secondItem="ho1-yy-hZr" secondAttribute="bottom" constant="20" id="fvv-UV-mAX"/>
+                <constraint firstItem="RzE-vU-E91" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="fP7-iu-F88"/>
+                <constraint firstItem="pbB-um-M0r" firstAttribute="top" secondItem="RzE-vU-E91" secondAttribute="bottom" constant="20" id="iub-58-8kG"/>
                 <constraint firstItem="JwJ-W1-AxH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="izd-Df-f79"/>
                 <constraint firstAttribute="trailing" secondItem="JwJ-W1-AxH" secondAttribute="trailing" id="lTg-Dg-uFz"/>
-                <constraint firstItem="ho1-yy-hZr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="rsQ-p9-KgI"/>
                 <constraint firstAttribute="bottom" secondItem="fh9-af-hh6" secondAttribute="bottom" constant="35" id="uDg-51-SxN"/>
-                <constraint firstAttribute="trailing" secondItem="ho1-yy-hZr" secondAttribute="trailing" constant="15" id="vRd-gr-98c"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
         </view>

@@ -9,7 +9,7 @@
 import UIKit
 
 enum ReminderType: Int {
-    case generic = 0, specific
+    case generic = 0, specific, here
 }
 
 class ReminderTypeManager: NSObject {
@@ -22,6 +22,9 @@ class ReminderTypeManager: NSObject {
                 
             case .specific:
                 return K.String.ReminderType.Specific
+            
+        case .here:
+            return K.String.ReminderType.Here
         }
     }
     
@@ -33,6 +36,9 @@ class ReminderTypeManager: NSObject {
             
             case K.String.ReminderType.Specific:
                 return .specific
+            
+            case K.String.ReminderType.Here:
+                return .here
             
             default:
                 fatalError("Unaccounted for ReminderType label")
