@@ -10,17 +10,16 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class AddNewReminderViewController: WIHViewController, UITextViewDelegate {
+class AddNewReminderViewController: WIHViewController, UITextViewDelegate, GMSMapViewDelegate {
     
     @IBOutlet weak var mapView: WIHMapView!
-    @IBOutlet weak var reminderTypeContainer: UIView!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
     
-    let reminderTypeOptions = [ReminderTypeManager.labelForType(.specific),
-                               ReminderTypeManager.labelForType(.here),
-                               ReminderTypeManager.labelForType(.generic)]
-    
+    var locationManager = CLLocationManager()
+    var currentLocation: CLLocation?
+    var placesClient: GMSPlacesClient!
+    var zoomLevel: Float = 15.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +35,13 @@ class AddNewReminderViewController: WIHViewController, UITextViewDelegate {
     
     func initialSetup() {
         
-        addObservers()
+        //addObservers()
         
-        setupScrollView()
         initMapView()
+        initLocationManager()
         setupNavigationBar()
-        setupTextField()
-        setupReminderType()
+        //setupTextField()
+        //setupReminderType()
         setupButtons()
     }
 
@@ -53,6 +52,30 @@ class AddNewReminderViewController: WIHViewController, UITextViewDelegate {
     
     func initMapView() {
     
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.delegate = self
+        
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        
+        let marker = GMSMarker(position: coordinate)
+        marker.title = "HAAAAYYYY"
+        marker.map = mapView
+    }
+    
+    func initLocationManager() {
+
+        locationManager = CLLocationManager()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.distanceFilter = 50
+        locationManager.startUpdatingLocation()
+        locationManager.delegate = self
+        
+        placesClient = GMSPlacesClient.shared()
     }
     
     func addObservers() {
@@ -78,63 +101,35 @@ class AddNewReminderViewController: WIHViewController, UITextViewDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-    func setupTextField() {
-    
-        descriptionTextView.delegate = self
-        descriptionTextView.returnKeyType = .done
-        descriptionTextView.text = K.String.AddNewReminder.DescriptionDefault
-    }
-    
-    func setupReminderType() {
-        let reminderFont = UIFont(name: K.FontName.GothamCondensedBook, size: 16)
-        
-        let reminderTypeControl = UISegmentedControl(items: reminderTypeOptions)
-        
-        //FIXME: THIS SUCKS
-        //reminderTypeControl.frame = CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width - 30, height: 28))
-        reminderTypeControl.tintColor = K.Color.LogoGray
-        reminderTypeControl.setTitleTextAttributes([NSFontAttributeName: reminderFont!], for: .normal)
-        reminderTypeControl.selectedSegmentIndex = 0
-        reminderTypeControl.addTarget(self, action: #selector(tappedReminderControl), for: .valueChanged)
-        
-        reminderTypeContainer.addSubview(reminderTypeControl)
-        reminderTypeControl.frame = CGRect(origin: .zero, size: (reminderTypeControl.superview?.frame.size)!)
-    }
-    
     func setupButtons() {
         
         saveButton.addTarget(self, action: #selector(tappedSaveButton), for: .touchUpInside)
     }
     
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == K.String.AddNewReminder.DescriptionDefault {
-            textView.text = ""
-        }
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.text = K.String.AddNewReminder.DescriptionDefault
-        }
-    }
-    
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        
-        if text == "\n" {
-            descriptionTextView.resignFirstResponder()
-        }
-        
-        return true
-    }
+//    func textViewDidBeginEditing(_ textView: UITextView) {
+//        if textView.text == K.String.AddNewReminder.DescriptionDefault {
+//            textView.text = ""
+//        }
+//    }
+//    
+//    func textViewDidEndEditing(_ textView: UITextView) {
+//        if textView.text.isEmpty {
+//            textView.text = K.String.AddNewReminder.DescriptionDefault
+//        }
+//    }
+//    
+//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+//        
+//        if text == "\n" {
+//            descriptionTextView.resignFirstResponder()
+//        }
+//        
+//        return true
+//    }
     
     func tappedSaveButton(_ sender: UIButton) {
         
         print("Save reminder")
-    }
-    
-    func tappedReminderControl(_ sender: UISegmentedControl) {
-        
-        print("Reminder Type: \(reminderTypeOptions[sender.selectedSegmentIndex])")
     }
     
     func keyboardDidShow(_ notif: NSNotification) {
@@ -157,5 +152,50 @@ class AddNewReminderViewController: WIHViewController, UITextViewDelegate {
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+}
+
+extension AddNewReminderViewController: CLLocationManagerDelegate {
+    
+    // Handle incoming location events.
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location: CLLocation = locations.last!
+        print("Location: \(location)")
+        
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
+                                              longitude: location.coordinate.longitude,
+                                              zoom: zoomLevel)
+        
+        if mapView.isHidden {
+            mapView.isHidden = false
+            mapView.camera = camera
+        } else {
+            mapView.animate(to: camera)
+        }
+        
+       // listLikelyPlaces()
+    }
+    
+    // Handle authorization for the location manager.
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .restricted:
+            print("Location access was restricted.")
+        case .denied:
+            print("User denied access to location.")
+            // Display the map using the default location.
+            mapView.isHidden = false
+        case .notDetermined:
+            print("Location status not determined.")
+        case .authorizedAlways: fallthrough
+        case .authorizedWhenInUse:
+            print("Location status is OK.")
+        }
+    }
+    
+    // Handle location manager errors.
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        locationManager.stopUpdatingLocation()
+        print("Error: \(error)")
     }
 }
